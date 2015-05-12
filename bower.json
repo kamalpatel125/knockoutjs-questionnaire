@@ -1,0 +1,18 @@
+{
+  "name": "KnockOutJs",
+  "version": "0.0.0",
+  "authors": [
+    "Kamal <kamalpatel12578@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.8.0"
+  }
+}

@@ -1,0 +1,108 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.hero-spacer {
+    margin-top: 10px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.selected {
+    border : 2px solid #337ab7;
+}
+
+.clearBoth{
+    clear:both;
+}
+
+.margin-top-md{
+    margin-top:20px;
+}
+
+.padding-top-sm{
+    padding-top: 7px;
+}
+
+.shipping-label{
+    text-align: right;
+}
+
+.show-shipping-charge-text{
+    text-align: left;
+    font-style: italic;
+}
+
+
+/* app css stylesheet */
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+.menu:before {
+    content: "[";
+}
+.menu:after {
+    content: "]";
+}
+.menu > li {
+    display: inline;
+}
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+.table .answer {
+    vertical-align: middle;
+    text-align: center;
+}
+.question-comments textarea {
+    width: 99%;
+}
+.table .question-col {
+    width: 40%;
+}
+.table .rating-col {
+    width: 10%;
+    text-align: center;
+}
+.table tbody tr td {
+    min-height: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.questionnaire-builder {
+    padding: 10px;
+}
+.questionnaire-wizard {
+    padding: 10px;
+}
+.questionnaire-wizard .col-md-3 {
+    width: 20%;
+}
+.questionnaire-wizard .col-md-9 {
+    width: 80%;
+}
+.questionnaire-wizard .steps .btn {
+    float: none;
+    width: 100%;
+    margin-bottom: 0.2em;
+    text-align: left;
+}
+.ui-radio {
+    margin: 0 10px 0 40px;
+    position: relative;
+}
+
