@@ -2,7 +2,7 @@
 
     'use strict';
 
-    define('questionnaireViewModel', [], function() {
+    define([], function() {
         var questionnaireViewModel = function (){
             var self = this;
             self.questionnairesData = [{

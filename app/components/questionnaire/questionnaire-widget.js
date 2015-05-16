@@ -3,45 +3,11 @@
     'use strict';
 
     define(["knockout",
-        "text!questionnaireWidget/questionnaire.tpl.html"
+            "lodash",
+            "text!questionnaireWidget/questionnaire.tpl.html",
+            "components/models/containerModel"
         ],
-        function (ko, questionnaireTemplate) {
-            var Container = function(c){
-                this.Id = c.Id;
-                this.Name = c.Name;
-                this.RatingScaleId = c.RatingScaleId;
-                this.DomainId = c.DomainId;
-                this.DomainName = c.DomainName;
-                this.Questions = _.map(c.Questions, function(q){
-                    return new Question(q);
-                });
-
-                this.Comments = _.map(c.Comments, function(x){
-                    return new Comment(x);
-                });
-             },
-                Question = function(q){
-                this.RatingId = ko.observable(q.RatingId);
-                this.QuestionText = q.QuestionText;
-                this.QuestionId = q.Id;
-
-                this.RatingId.subscribe(function(value) {
-                    q.RatingId = value;
-                });
-
-                this.Comments = _.map(q.Comments, function(c){
-                    return new Comment(c);
-                });
-             },
-                Comment = function(c){
-                this.Response = ko.observable(c.Response);
-                this.Prompt = c.Prompt;
-                this.Id = function() { return c.Id; };
-
-                this.Response.subscribe(function(value){
-                    c.Response = value;
-                });
-            };
+        function (ko, _, questionnaireTemplate, Container) {
 
             function QuestionnaireComponentViewModelFn(params){
                 var self = this;
@@ -195,7 +161,7 @@
                 self.questionsAndRatings(questionsAndRatings);
                 self.commentsAndResponses(commentsAndResponses);
 
-            }
+            };
 
             return {
                 viewModel: QuestionnaireComponentViewModelFn,
